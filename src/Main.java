@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IsFullException {
         Parking parking = new Parking(3);
         Car car = new Car("blue", 4);
         Truck truck = new Truck("green", 4);

@@ -15,17 +15,15 @@ public class Parking {
         return vehicles.size() >= capacity;
     }
 
-    public void addVehicle(Vehicle vehicle) {
-        try {
+    public void addVehicle(Vehicle vehicle) throws IsFullException {
             if (isFull(capacity)) {
                 throw new IsFullException("The parking lot is full!");
             }
             vehicles.add(vehicle);
             System.out.println("The vehicle with color " + vehicle.getColor() + " is in the parking lot!");
-        } catch (IsFullException e) {
-            System.out.println(e.getMessage());
         }
-    }
+
+
 
 
     public void removeVehicle(Vehicle vehicle) {
